@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>SOV Payment Processor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+
+    <div class="header">
+        <div class="right">
+            <a href="/">Order</a>
+            <a href="/orders.html">History</a>
+            <a href="/products.html">Products</a>
+            <a href="/users.html">Users</a>
+            <a href="/logout.html">Logout</a>
+        </div>
+    </div>
+    <br>
+
+    <body>
+        <div id="sovValue">
+            The value of 1 SOV is $<span id="sovValueNum"></span>
+        </div>
+        <br>
+
+        <div id="productsDiv">
+            <table id="products">
+            </table>
+        </div>
+        <br>
+
+        <div id="totals">
+            <span id="usdTotal">
+                USD: <span id="usdTotalNum">0</span>
+            </span>
+            <span id="sovTotal">
+                SOV: <span id="sovTotalNum">0</span>
+            </span>
+        </div>
+        <br>
+
+        <span id="customAmount">
+            Enter a Custom USD Amount: <input type="text" id="customAmountInput"></input>
+        </span>
+        <br>
+
+        <div id="orderButtonDiv">
+            <button type="button" onclick="order()" id="orderButton">Order</button>
+        </div>
+    <body>
+
+    <script src="/js/routes/request.js"></script>
+    <script src="/js/routes/price.js"></script>
+    <script src="/js/routes/products.js"></script>
+    <script src="/js/routes/orders.js"></script>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
+</html>

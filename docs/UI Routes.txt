@@ -1,0 +1,35 @@
+Unless the return data is specified as JSON, it is raw.
+That means the SOV price GET route returns "1.50" not "{price: 1.50}".
+
+GET
+    /                     -- Renders public/index.html.
+    /file.html            -- Renders public/file.html.
+    /qr/ADDRESS           -- Renders the QR code for ADDRESS.
+
+    /price/sov            -- Returns the price of SOV in USD as raw data.
+
+    /users/list           -- Returns the usernames for every user as a JSON array.
+    /users/listAdmins     -- Returns the usernames for every admin as a JSON array. Requires admin privileges.
+
+    /orders/active        -- Returns all active orders as a JSON object.
+    /orders/succeeded     -- Returns all succeeded orders as a JSON object.
+    /orders/failed        -- Return all failed orders as a JSON objects.
+
+    /products/list        -- Returns an array of all products as a JSON object.
+
+POST
+    /users/login          -- Logs in using {user, pass}. Returns true/false. This also sets a cookie of the auth token.
+    /users/logout         -- Logs the user out by deleting their cookie and invalidating it on the server. Returns true.
+    /users/new            -- Creates a new user using {user, pass, admin}. Returns true/false. Requires admin privileges.
+    /users/changePassword -- Changes an users password using {user, pass}. Returns true/false. Requires admin privileges, unless the user is themself.
+    /users/delete         -- Deletes an user using {user}. Returns true/false. Requires admin privileges.
+
+    /orders/new           -- Creates a new order using {amount, note, products (an array of product indexes; optional)}. Returns the address to pay to/the order is indexed under.
+    /orders/cash          -- Marks an order as succeeded using {address}. Returns true/false.
+    /orders/cancel        -- Cancels an order using {address}. Returns true/false.
+
+    /products/new         -- Creates a new product using {name, assetPath, usdCost}. Returns true/false. Requires admin privileges.
+    /products/delete      -- Deletes a product using {index, name}. Returns true/false. Requires admin privileges.
+    /products/calculate   -- Takes in an array of numbers (product indexes). Returns the total cost in SOV, or false on error.
+
+    /settings/update      -- In progress.

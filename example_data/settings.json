@@ -1,0 +1,8 @@
+{
+    "rpcport": 3322,
+    "rpcuser": "user",
+    "rpcpass": "pass",
+    "confirms": 1,
+    "zeroConfUSD": 50,
+    "ssl": true
+}
