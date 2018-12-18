@@ -3,7 +3,7 @@ window.price = {
         amount = amount.toString();
         if (amount.indexOf(".") > -1) {
             amount = amount.split(".");
-            amount[1] = amount[1].substr(0, 2);
+            amount[1] = amount[1].substr(0, 6);
             amount = amount.join(".");
         }
         return amount;
