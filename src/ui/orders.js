@@ -73,7 +73,7 @@ module.exports = async (config) => {
             res.end("false");
             return;
         }
-        var amount = parseFloat(await cmc.sovFormat(req.body.amount));
+        var amount = parseFloat(await cmc.hthFormat(req.body.amount));
 
         if (amount <= 0.01) {
             res.end("false");
