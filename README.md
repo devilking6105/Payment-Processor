@@ -36,9 +36,14 @@ node main.js
 In the event the above fails, 
 
 cd Payment-Processor
+
 mv example_data data
+
 npm install gyp -g
+
 npm install scrypt -g
+
 npm i
+
 node main.js
 
