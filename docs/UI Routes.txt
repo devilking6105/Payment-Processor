@@ -1,12 +1,12 @@
 Unless the return data is specified as JSON, it is raw.
-That means the SOV price GET route returns "1.50" not "{price: 1.50}".
+That means the HTH price GET route returns "1.50" not "{price: 1.50}".
 
 GET
     /                     -- Renders public/index.html.
     /file.html            -- Renders public/file.html.
     /qr/ADDRESS           -- Renders the QR code for ADDRESS.
 
-    /price/sov            -- Returns the price of SOV in USD as raw data.
+    /price/sov            -- Returns the price of HTH in USD as raw data.
 
     /users/list           -- Returns the usernames for every user as a JSON array.
     /users/listAdmins     -- Returns the usernames for every admin as a JSON array. Requires admin privileges.
@@ -30,6 +30,6 @@ POST
 
     /products/new         -- Creates a new product using {name, assetPath, usdCost}. Returns true/false. Requires admin privileges.
     /products/delete      -- Deletes a product using {index, name}. Returns true/false. Requires admin privileges.
-    /products/calculate   -- Takes in an array of numbers (product indexes). Returns the total cost in SOV, or false on error.
+    /products/calculate   -- Takes in an array of numbers (product indexes). Returns the total cost in HTH, or false on error.
 
     /settings/update      -- In progress.
