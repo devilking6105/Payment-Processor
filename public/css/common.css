@@ -3,11 +3,13 @@
     padding: 20px 10px;
 
     overflow: hidden;
-    background-color: #6ac6d9;
+    background-color: black;
+    font-weight: bold;
+
 }
 
 .header .right {
-    float: right;
+    float: center;
     text-align: center;
 }
 
@@ -16,7 +18,8 @@
     line-height: 25px;
     border-radius: 4px;
 
-    color: white;
+    color: #34bcaa;
     font-size: 24px;
     text-decoration: none;
 }
+
