@@ -39,11 +39,11 @@ async function init() {
     document.getElementById("status").innerHTML = status;
     switch (status) {
         case "Pending":
-            document.getElementById("statusDiv").style.background = "#6ac6d9";
+            document.getElementById("statusDiv").style.background = "#498437";
             break;
 
         case "Succeeded":
-            document.getElementById("statusDiv").style.background = "lightgreen";
+            document.getElementById("statusDiv").style.background = "green";
             break;
 
         case "Failed":
@@ -58,15 +58,15 @@ async function init() {
 
     document.getElementById("date").innerHTML = (new Date(order.time)).toString().split("GMT")[0];
     document.getElementById("usd").innerHTML = await window.price.format(order.usd);
-    document.getElementById("sovPayment").innerHTML = await window.price.format(order.amount);
-    document.getElementById("sovNow").innerHTML = await window.price.usdToSOV(order.usd);
+    document.getElementById("hthPayment").innerHTML = await window.price.format(order.amount);
+    document.getElementById("hthNow").innerHTML = await window.price.usdToHTH(order.usd);
     document.getElementById("note").innerHTML = order.note;
 }
 
 //Wait until we have the price and orders...
 async function timeout() {
     if (
-        (typeof(window.price.sov) === "undefined") ||
+        (typeof(window.price.hth) === "undefined") ||
         (typeof(window.orders.active) === "undefined") ||
         (typeof(window.orders.succeeded) === "undefined") ||
         (typeof(window.orders.failed) === "undefined")
