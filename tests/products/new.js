@@ -8,7 +8,7 @@ module.exports = async (token) => {
         url: "http://localhost:8080/products/new",
         body: {
             name: "Product 2",
-            usdCost: 3
+            usdCost: 1
         },
         json: true,
         headers: {Cookie: "token=" + token}
