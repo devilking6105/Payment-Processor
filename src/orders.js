@@ -7,13 +7,13 @@ var cmc, fs;
 //Passed in variables.
 //The emitter is for message passing and zeroConfUSD is the max amount of USD to accept with 0 confs.
 var emitter, zeroConfUSD;
-//zeroConf in SOV and the order book.
+//zeroConf in HTH and the order book.
 var zeroConf, orders;
 
-//Updates the zeroConf amount in SOV. Runs every half hour.
+//Updates the zeroConf amount in HTH. Runs every half hour.
 async function updateZeroConf() {
     zeroConf = parseFloat(
-        await cmc.sovFormat(await cmc.usdToSOV(zeroConfUSD))
+        await cmc.hthFormat(await cmc.usdToHTH(zeroConfUSD))
     );
 }
 setInterval(updateZeroConf, 30*60*1000);
@@ -40,7 +40,7 @@ module.exports = async (config) => {
     emitter = config.emitter;
 
     zeroConfUSD = config.zeroConfUSD;
-    //Make sure we have a zeroConf SOV amount and not just one for USD.
+    //Make sure we have a zeroConf HTH amount and not just one for USD.
     await updateZeroConf();
 
     //Add a handler for the order update event.
@@ -86,7 +86,7 @@ module.exports = async (config) => {
             //Create the order object. Amount, USD value, note, and time index.
             orders[address] = {
                 amount: amount,
-                usd: await cmc.sovToUSD(amount),
+                usd: await cmc.hthToUSD(amount),
                 note: note,
                 time: (new Date()).getTime()
             };
