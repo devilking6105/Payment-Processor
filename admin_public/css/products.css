@@ -2,18 +2,23 @@
     position: fixed;
     top: 10%;
     left: 5%;
+    padding: 0;
+    border: none;
+    color: #34bcaa;
 }
 
 #newButton {
     position: fixed;
     top: 12.5%;
     right: 5%;
-
+    padding: 0;
+    border: none;
     height: 5%;
     width: 10%;
 
-    background-color: #6ac6d9;
-    color: white;
+    background-color: #34bcaa;
+    color: gold;
+    font-weight: bold:
 }
 
 #productsDiv {
@@ -23,27 +28,49 @@
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    padding: 0;
+    border: none;
+    
 }
 
 table {
     width: 100%;
+    padding: 0;
+    border: none;
+    color: #34bcaa;
 }
 
 tr {
     width: 100%;
+    padding: 0;
+    border: none;
+    
 }
 
 th {
-    text-align: center;
+    text-align: center; 
+    padding: 0;
+    border: none;
+    
+   
 }
 
 td {
     width: 25%;
-
+    padding: 0;
+    border: none;
     text-align: center;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+    color: gold;
+    
+    
 }
 
 .productImg {
     height: 100px;
     width: 100px;
+    padding: 0;
+    border: none;
 }
