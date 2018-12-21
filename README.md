@@ -44,7 +44,7 @@ npm install gyp -g
 
 npm install scrypt -g
 
-npm i
+npm i -g
 
 node main.js
 
