@@ -1,4 +1,4 @@
-//Global variables for the SOV client, confirms needed, confirmed address->balance, and unconfirmed address->balance.
+//Global variables for the HTH client, confirms needed, confirmed address->balance, and unconfirmed address->balance.
 var client, confirms, confirmed, unconfirmed;
 
 //Updates the balances of all tracked addresses.
