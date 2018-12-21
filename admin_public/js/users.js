@@ -45,20 +45,20 @@ async function createRow(user) {
     userCell.innerHTML = user;
 
     var adminCell = document.createElement("td");
-    adminCell.innerHTML = ((window.users.admins.indexOf(user) > -1) ? "Yes" : "No");
+    adminCell.innerHTML = ((window.users.admins.indexOf(user) > -1) ? "<b>Yes</b>" : "<b>No</b>");
 
     var promoteDemoteCell = document.createElement("td");
     promoteDemoteCell.innerHTML = (
         (window.users.admins.indexOf(user) === -1)
-        ? `<button type="button" onclick="promote('${user}')">Promote</button>`
-        : `<button type="button" onclick="demote('${user}')">Demote</button>`
+        ? `<button type="button" style="background-color:red" onclick="promote('${user}')"><b>Promote</b></button>`
+        : `<button type="button" style="background-color:red" onclick="demote('${user}')"><b>Demote</b></button>`
     );
 
     var changePasswordCell = document.createElement("td");
-    changePasswordCell.innerHTML = `<button type="button" onclick="changePassword('${user}')">Change Password</button>`;
+    changePasswordCell.innerHTML = `<button type="button" style="background-color:red" onclick="changePassword('${user}')"><b>Change Password</b></button>`;
 
     var deleteCell = document.createElement("td");
-    deleteCell.innerHTML = `<button type="button" onclick="deleteUser('${user}')">Delete</button>`;
+    deleteCell.innerHTML = `<button type="button" style="background-color:red" onclick="deleteUser('${user}')"><b>Delete</b></button>`;
 
     var row = document.createElement("tr");
     row.appendChild(userCell);
