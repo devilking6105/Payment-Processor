@@ -39,7 +39,7 @@ module.exports = async (config) => {
             usd += cart[req.body[i]].usdCost;
         }
 
-        res.end(await cmc.sovFormat(await cmc.usdToSOV(usd)));
+        res.end(await cmc.hthFormat(await cmc.usdToHTH(usd)));
     });
 
     router.use(accounts.middlewares.admin);
