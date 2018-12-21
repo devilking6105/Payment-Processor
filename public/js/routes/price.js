@@ -9,29 +9,29 @@ window.price = {
         return amount;
     },
 
-    getSOV: async () => {
-        GET("/price/sov", async (res) => {
+    getHTH: async () => {
+        GET("/price/hth", async (res) => {
             if (Number.isNaN(parseFloat(res))) {
                 return;
             }
 
             //Set a global variable.
-            window.price.sov = await window.price.format(res);
+            window.price.hth = await window.price.format(res);
             //Update the HTML field if it exists.
-            var sovHTML = document.getElementById("sovValueNum");
-            if (sovHTML !== null) {
-                sovHTML.innerHTML = window.price.sov;
+            var hthHTML = document.getElementById("hthValueNum");
+            if (hthHTML !== null) {
+                hthHTML.innerHTML = window.price.hth;
             }
         });
     },
 
-    sovToUSD: async (amount) => {
-        return (await window.price.format(amount * parseFloat(window.price.sov)));
+    hthToUSD: async (amount) => {
+        return (await window.price.format(amount * parseFloat(window.price.hth)));
     },
 
-    usdToSOV: async (amount) => {
-        return (await window.price.format(amount / parseFloat(window.price.sov)));
+    usdToHTH: async (amount) => {
+        return (await window.price.format(amount / parseFloat(window.price.hth)));
     }
 };
 
-window.price.getSOV();
+window.price.getHTH();
