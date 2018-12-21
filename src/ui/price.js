@@ -7,8 +7,8 @@ module.exports = async (config) => {
 
     var router = express.Router();
 
-    router.get("/sov", async (req, res) => {
-        res.end((await cmc.getSOVPrice()).toString());
+    router.get("/hth", async (req, res) => {
+        res.end((await cmc.getHTHPrice()).toString());
     });
 
     return router;
