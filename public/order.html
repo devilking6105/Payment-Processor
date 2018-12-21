@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>SOV Payment Processor</title>
+        <title>HTH Payment Processor</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/css/common.css">
@@ -19,12 +19,16 @@
         </div>
     </div>
     <br>
-
+<style>
+     body{
+        background-color: black;
+}
+</style>
     <body>
         <h1>Order <span id="address"></span></h1>
         <br>
 
-        <div id="statusDiv">Status:&nbsp;<span id="status"></span></div>
+        <div style=" color: gold" id="statusDiv">Status:&nbsp;<span id="status"></span></div>
 
         <div id="qrDiv">
             <img id="qr"></img>
@@ -35,17 +39,17 @@
             <br>
             USD: <span id="usd"></span>
             <br>
-            SOV at the time: <span id="sovPayment"></span>
+            HTH at the time: <span id="hthPayment"></span>
             <br>
-            SOV now: <span id="sovNow"></span>
+            HTH now: <span id="hthNow"></span>
             <br>
-            Note: "<span id="note"></span>"
+             Note: "<span id="note"></span>"
         </div>
 
         <div id="buttons">
             <button type="button" onclick="cancel()" id="cancelButton">Cancel</button>
-            <button type="button" onclick="paidInCash()" id="cashButton">Paid in Cash</button>
-            <button type="button" onclick="done()" id="doneButton">Done</button>
+            <button type="button" style="color: #34bcaa" onclick="paidInCash()" id="cashButton">Paid in Cash</button>
+            <button type="button" style="color: gold" onclick="done()" id="doneButton">Done</button>
         </div>
     <body>
 
