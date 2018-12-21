@@ -1,7 +1,7 @@
 {
     "name": "payment-processor",
     "version": "1.0.0",
-    "description": "Payment Processor for SOV.",
+    "description": "Payment Processor for HTH.",
     "main": "main.js",
     "author": "Luke Parker",
     "license": "MIT",
