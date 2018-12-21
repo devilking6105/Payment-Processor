@@ -2,18 +2,21 @@
     position: fixed;
     top: 10%;
     height: 5%;
+    color: #34bcaa;
 }
 
 #succeededH1 {
     position: fixed;
     top: 40%;
     height: 5%;
+    color: #34bcaa;
 }
 
 #failedH1 {
     position: fixed;
     top: 70%;
     height: 5%;
+    color: #34bcaa;
 }
 
 .tableDiv {
@@ -22,6 +25,7 @@
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    color: gold;
 }
 
 #pendingDiv {
@@ -40,7 +44,7 @@
 table, tr {
     width: 100%;
 
-    border: 1px solid black;
+    border: 1px solid #34bcaa;
     border-collapse: collapse;
 }
 
