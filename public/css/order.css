@@ -4,6 +4,7 @@ h1 {
 
     height: 5%;
     width: 100%;
+    color: gold;
 
     text-align: center;
 }
@@ -13,6 +14,8 @@ h1 {
     top: 20%;
     margin-left: 37.5%;
     margin-right: 37.5%;
+    background-color: #34bcaa !important;
+    color: gold !important;
 
     height: 7.5%;
     width: 25%;
@@ -26,11 +29,12 @@ h1 {
 #qrDiv {
     position: fixed;
     top: 28.75%;
-
     height: 25%;
-    width: 25%;
-
-    margin-left: 37.5%;
+    width: 15%;
+    background-color: #34bcaa;
+    padding: 0;
+    border: none;  
+    margin-left: 42.5%;
     margin-right: 37.5%;
 }
 
@@ -41,15 +45,18 @@ h1 {
 
     height: 30%;
     width: 50%;
-
+   
     font-size: 30px;
+    font-weight: bold;
+    color: gold !important;
 }
 
 #buttons {
     position: fixed;
     top: 85%;
     margin-left: 20%;
-
+    padding: 0;
+    border: none;
     height: 10%;
     width: 60%;
 }
@@ -57,6 +64,10 @@ h1 {
 #buttons #cancelButton {
     height: 100%;
     width: 33.33%;
+    font-weight: bold;
+    font-color: #000;
+    padding: 0;
+    border: none;
 
     float: left;
 
@@ -66,17 +77,25 @@ h1 {
 #buttons #cashButton {
     height: 100%;
     width: 33.33%;
+    font-weight: bold;
+    font-color: #34bcaa !important;
+    padding: 0;
+    border: none;
 
     float: none;
 
-    background-color: lightgreen;
+    background-color: gold;
 }
 
 #buttons #doneButton {
     height: 100%;
     width: 33.33%;
+    font-weight: bold;
+    font-color: gold !important;
+    padding: 0;
+    border: none;
 
     float: right;
 
-    background-color: #6ac6d9;
+    background-color: #34bcaa;
 }
