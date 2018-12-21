@@ -129,3 +129,28 @@ async function init() {
                 <button type="button" style="background-color: red" onclick="subtract(${i})">-</button> Quantity: <span id="product-${i}">0</span> <button type="button" style="background-color: green" onclick="add(${i})">+</button>
             </div>
         `;
+
+        //While we're here, set the amount of each product in the cart to 0.
+        window.products.products[i].cart = 0;
+    }
+
+    //Put the cells in the rows, and the rows in the table.
+    for (i in cells) {
+        rows[Math.floor(i / 3)].appendChild(cells[i]);
+        table.appendChild(rows[Math.floor(i / 3)]);
+    }
+}
+
+//Wait until we have the price and products...
+async function timeout() {
+    if (
+        (typeof(window.price.hth) === "undefined") ||
+        (typeof(window.products.products) === "undefined")
+    ) {
+        setTimeout(timeout, 50);
+        return;
+    }
+
+    init();
+}
+timeout();
