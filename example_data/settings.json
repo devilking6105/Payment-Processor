@@ -1,5 +1,5 @@
 {
-    "rpcport": 3322,
+    "rpcport": 9215,
     "rpcuser": "user",
     "rpcpass": "pass",
     "confirms": 1,
