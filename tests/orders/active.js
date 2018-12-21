@@ -7,7 +7,7 @@ async function createOrder(amount) {
         url: "http://localhost:8080/orders/new",
         body: {
             amount: amount,
-            note: ("This is a test for " + amount + " SOV.")
+            note: ("This is a test for " + amount + " HTH.")
         },
         json: true,
         headers: {Cookie: "token=admin"}
