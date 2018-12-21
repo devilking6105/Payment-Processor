@@ -28,6 +28,7 @@ git clone https://github.com/Devilking6105/Payment-Processor.git
 cd Payment-Processor 
 
 mv example_data data (In Windows, the command is move example_data data)
+
 npm i
 
 node main.js
