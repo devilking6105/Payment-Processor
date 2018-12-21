@@ -15,16 +15,16 @@ async function updateTotals() {
     await window.products.calculate(buying);
 
     //When we get a response...
-    async function updateSOV() {
+    async function updateHTH() {
         if (typeof(window.products.price) === "undefined") {
-            setTimeout(updateSOV, 10);
+            setTimeout(updateHTH, 10);
             return;
         }
 
-        //Update the SOV price HTML.
-        document.getElementById("sovTotalNum").innerHTML = window.products.price;
+        //Update the HTH price HTML.
+        document.getElementById("hthTotalNum").innerHTML = window.products.price;
     }
-    setTimeout(updateSOV, 10);
+    setTimeout(updateHTH, 10);
 }
 
 async function add(i) {
@@ -56,7 +56,7 @@ async function order() {
     var buying;
 
     if (customAmount > 0) {
-        window.products.price = parseFloat(await window.price.usdToSOV(customAmount));
+        window.products.price = parseFloat(await window.price.usdToHTH(customAmount));
     } else {
         buying = [];
         for (var i in window.products.products) {
@@ -126,31 +126,6 @@ async function init() {
                 <br>
                 ${window.products.products[i].name}: $${window.products.products[i].usdCost}
                 <br>
-                <button type="button" onclick="subtract(${i})">-</button> Quantity: <span id="product-${i}">0</span> <button type="button" onclick="add(${i})">+</button>
+                <button type="button" style="background-color: red" onclick="subtract(${i})">-</button> Quantity: <span id="product-${i}">0</span> <button type="button" style="background-color: green" onclick="add(${i})">+</button>
             </div>
         `;
-
-        //While we're here, set the amount of each product in the cart to 0.
-        window.products.products[i].cart = 0;
-    }
-
-    //Put the cells in the rows, and the rows in the table.
-    for (i in cells) {
-        rows[Math.floor(i / 3)].appendChild(cells[i]);
-        table.appendChild(rows[Math.floor(i / 3)]);
-    }
-}
-
-//Wait until we have the price and products...
-async function timeout() {
-    if (
-        (typeof(window.price.sov) === "undefined") ||
-        (typeof(window.products.products) === "undefined")
-    ) {
-        setTimeout(timeout, 50);
-        return;
-    }
-
-    init();
-}
-timeout();
