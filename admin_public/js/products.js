@@ -35,7 +35,7 @@ async function createRow(data) {
     priceCell.innerHTML = data.price;
 
     var deleteCell = document.createElement("td");
-    deleteCell.innerHTML = `<button type="button" onclick="deleteProduct(${data.index}, '${data.name}')" class="deleteButton">Delete</button>`;
+    deleteCell.innerHTML = `<button type="button" style="background-color:red" onclick="deleteProduct(${data.index}, '${data.name}')" class="deleteButton"><b>Delete</b></button>`;
 
     var row = document.createElement("tr");
     row.appendChild(assetCell);
