@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Payment Processor for SOV.",
     "main": "main.js",
-    "author": "Luke Parker",
+    "author": "Luke Parker & Devilking6105",
     "license": "MIT",
     "dependencies": {
         "bitcoin-core": "^2.0.0",
