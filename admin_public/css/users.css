@@ -4,7 +4,7 @@
     left: 5%;
     padding: 0;
     border: none;
-    color: #34bcaa;
+    color: #000;
 }
 
 #newButton {
@@ -31,7 +31,7 @@
     margin-right: 5%;
     padding: 0;
     border: none;
-    color: #34bcaa;
+    color: #000;
 }
 
 table {
@@ -57,7 +57,7 @@ td {
     font-weight: bold;
     padding: 0;
     border: none;
-    color: gold;
+    color: #000;
     
     text-align: center;
 }
