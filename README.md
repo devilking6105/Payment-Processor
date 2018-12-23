@@ -1,5 +1,6 @@
-# Payment-Processor 
-A Payment Processor for HTH.
+# HTH Payment-Processor 
+
+A Payment Processor for Help The Homeless Coin.
 
 How to Install from Source:
 
