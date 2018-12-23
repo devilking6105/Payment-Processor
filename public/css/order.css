@@ -75,13 +75,11 @@ h1 {
     height: 100%;
     width: 33.33%;
     font-weight: bold;
-    font-color: #34bcaa !important;
+    font-color: #debf12 !important;
     padding: 0;
     border: none;
-
     float: none;
-
-    background-color: gold;
+    background-color: #34bcaa !important;
 }
 
 #buttons #doneButton {
