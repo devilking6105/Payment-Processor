@@ -50,15 +50,15 @@ async function createRow(user) {
     var promoteDemoteCell = document.createElement("td");
     promoteDemoteCell.innerHTML = (
         (window.users.admins.indexOf(user) === -1)
-        ? `<button type="button" style="background-color:red" onclick="promote('${user}')"><b>Promote</b></button>`
-        : `<button type="button" style="background-color:red" onclick="demote('${user}')"><b>Demote</b></button>`
+        ? `<button type="button" onclick="promote('${user}')"><b>Promote</b></button>`
+        : `<button type="button" onclick="demote('${user}')"><b>Demote</b></button>`
     );
 
     var changePasswordCell = document.createElement("td");
-    changePasswordCell.innerHTML = `<button type="button" style="background-color:red" onclick="changePassword('${user}')"><b>Change Password</b></button>`;
+    changePasswordCell.innerHTML = `<button type="button" onclick="changePassword('${user}')"><b>Change Password</b></button>`;
 
     var deleteCell = document.createElement("td");
-    deleteCell.innerHTML = `<button type="button" style="background-color:red" onclick="deleteUser('${user}')"><b>Delete</b></button>`;
+    deleteCell.innerHTML = `<button type="button" onclick="deleteUser('${user}')"><b>Delete</b></button>`;
 
     var row = document.createElement("tr");
     row.appendChild(userCell);
