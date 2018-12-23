@@ -37,7 +37,7 @@ table {
     width: 100%;
     padding: 0;
     border: none;
-    color: #34bcaa;
+    color: #000;
 }
 
 tr {
@@ -63,7 +63,7 @@ td {
     font-weight: bold;
     padding: 0;
     border: none;
-    color: gold;
+    color: #000;
     
     
 }
