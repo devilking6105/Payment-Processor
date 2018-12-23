@@ -58,7 +58,7 @@ async function createRow(user) {
     changePasswordCell.innerHTML = `<button type="button" onclick="changePassword('${user}')"><b>Change Password</b></button>`;
 
     var deleteCell = document.createElement("td");
-    deleteCell.innerHTML = `<button type="button" onclick="deleteUser('${user}')"><b>Delete</b></button>`;
+    deleteCell.innerHTML = `<button type="button" style="background-color:red" onclick="deleteUser('${user}')"><b>Delete</b></button>`;
 
     var row = document.createElement("tr");
     row.appendChild(userCell);
